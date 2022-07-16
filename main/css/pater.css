@@ -1,0 +1,253 @@
+.pater {
+	position: absolute;
+	z-index: 10;
+	right: 2em;
+	bottom: calc(4em + 5vh);
+	max-width: 200px;
+	text-align: right;
+	pointer-events: none;
+}
+
+.pater::before {
+	content: '"http://www.codrops.com"' ;
+	position: absolute;
+	bottom: calc(100% + 0.75em);
+	right: 1rem;
+	font-size: 0.65em;
+	color: #484848;
+}
+
+.pater__img {
+	max-width: 75%;
+	pointer-events: auto;
+	display: block;
+	margin: 0 0 0 auto;
+}
+
+.pater__title {
+	font-size: 0.975rem;
+	font-family: roboto;
+	font-weight: 500;
+	margin: 0;
+	padding: 0.75em 0;
+	pointer-events: auto;
+	color: #8e8e8e;
+}
+
+.pater__title {
+	font-size: 1.6rem;
+	font-weight: 500;
+	margin: 0.5rem 2.5rem;
+	padding: 0.5em 0;
+	pointer-events: auto;
+	color: rgb(200,200,200);
+	transform: translateX(-30px);
+}
+
+.pater__desc {
+	font-size: 1.15rem;
+	font-family: verdana;
+	margin: 0 1rem;
+	pointer-events: none;
+	cursor: default;
+	opacity: 0;
+	color: rgb(0,200,220);
+	transform: translate3d(-40px,10px,0);
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.mode--code .pater__title,
+.mode--code .pater__desc {
+	font-size: 0.75em;
+	text-transform: initial;
+}
+
+.pater:hover .pater__desc {
+	pointer-events: auto;
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}
+
+@media screen and (min-width: 150px) {
+	.pater__title {
+		font-size: 0.9rem;
+		transform: translateX(35px);
+	}
+	.pater__desc {
+		font-size: 0.8rem;
+	}
+}
+
+@media screen and (min-width: 320px) {
+	.pater {
+		right: 1rem;
+	}
+	.pater__title {
+		font-size: 0.9rem;
+		right: 10%;
+	}
+	.pater__desc {
+		font-size: 0.7rem;
+		margin-right: -12px;
+	}
+	.pater::before {
+		right: -0.6rem;
+	}
+}
+
+@media screen and (min-width: 742px) {
+	.pater {
+		bottom: calc(6em + 5vh);
+	}
+
+	.pater__title {
+		font-size: 1.6rem;
+	}
+	.pater__desc {
+		font-size: 1rem;
+		margin-right: 1rem ;
+	}
+}
+
+
+/*.pater {
+	position: absolute;
+	z-index: 10;
+	right: 2em;
+	bottom: calc(4em + 5vh);
+	max-width: 200px;
+	text-align: right;
+	pointer-events: none;
+}
+
+.pater::before {
+	content: 'http://www.codrops.com' ;
+	position: absolute;
+	bottom: calc(100% + 0.75em);
+	right: 0;
+	font-size: 0.65em;
+	color: #484848;
+}
+
+.pater__img {
+	max-width: 75%;
+	pointer-events: auto;
+	display: block;
+	margin: 0 0 0 auto;
+}
+
+.pater__title {
+	font-size: 0.975rem;
+	font-family: roboto;
+	font-weight: 500;
+	margin: 0;
+	padding: 0.75em 0;
+	pointer-events: auto;
+	color: #8e8e8e;
+}
+
+.pater__title {
+	font-size: 1.6rem;
+	font-weight: 500;
+	margin: 0.5rem 2.5rem;
+	padding: 0.5em 0;
+	pointer-events: auto;
+	color: rgb(200,200,200);
+	transform: translateX(-30px);
+}
+
+.pater__desc {
+	font-size: 1.15rem;
+	font-family: sans-serif;
+	margin: 0 1rem;
+	pointer-events: none;
+	cursor: default;
+	opacity: 0;
+	color: rgb(105,200,120);
+	transform: translate3d(-40px,10px,0);
+	transition: transform 0.3s, opacity 0.3s;
+}
+
+.mode--code .pater__title,
+.mode--code .pater__desc {
+	font-size: 0.75em;
+	text-transform: initial;
+}
+
+.pater:hover .pater__desc {
+	pointer-events: auto;
+	opacity: 1;
+	transform: translate3d(0,0,0);
+}
+
+@media screen and (min-width: 150px) {
+	.pater__title {
+		font-size: 0.9rem;
+		transform: translateX(18px);
+	}
+	.pater__desc {
+		font-size: 0.8rem;
+	}
+}
+
+@media screen and (min-width: 320px) {
+	.pater {
+		right: 1rem;
+	}
+	.pater__title {
+		font-size: 0.9rem;
+		right: 10%;
+	}
+	.pater__desc {
+		font-size: 0.85rem;
+	}
+}
+
+@media screen and (min-width: 742px) {
+	.pater {
+		bottom: calc(6em + 5vh);
+	}
+
+	.pater__title {
+		font-size: 1.6rem;
+	}
+	.pater__desc {
+		font-size: 1rem;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	.pater {
+		right: auto;
+		bottom: 4em;
+		left: 0;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		width: 100%;
+		max-width: none;
+		padding: 0.5em 1em;
+		text-align: left;
+		pointer-events: auto;
+		background: rgba(63, 57, 57, 0.43);
+	}
+	.pater::before {
+		display: none;
+	}
+	.pater__img {
+		flex: none;
+		width: 80px;
+		margin: 0;
+	}
+	.pater__title {
+		font-size: 0.75em;
+		padding: 0 0 0 0.5em;
+	}
+	.pater__desc {
+		display: none;
+	}
+	.pater br {
+		display: none;
+	}
+}
+*/
